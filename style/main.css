@@ -1,0 +1,379 @@
+/* main */
+:root {
+    --main-color: #f70776;
+    --shadow-color: rgba(247, 7, 118, 0.7);
+    --transition: .6s;
+}
+
+
+/* ::-webkit-scrollbar {
+    width: 1.5rem;
+    
+}
+
+::-webkit-scrollbar-track {
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5px;
+} */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    
+}
+body{
+    background: linear-gradient(45deg, #132743, #5585b5);
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: 800;
+}
+/* end main */
+
+/* navbar */
+.navbar{
+    z-index: 30;
+}
+.navbar:hover{
+    width: 40%;
+    background-color: rgba(0, 0, 0, .5) !important;
+}
+.navbar .navbar-brand{
+    position: relative;
+    animation-name: logo;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-delay: var(--transition);
+    
+}
+@keyframes logo{
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0deg);
+        opacity: .5;
+    }
+}
+.navbar .collapse .active{
+    color: var(--main-color) !important;
+}
+.navbar .collapse .nav-link:hover{
+    color: var(--main-color);
+}
+.navbar .collapse .dropdown-toggle:focus{
+    color: var(--main-color);
+}
+/* end navbar */
+
+/* header */
+.header{
+    background-image: url(../image/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+.header .layout{
+    background: linear-gradient(90deg,var(--shadow-color), rgba(0,0,0,1));
+}
+.header .layout span{
+    color: var(--main-color);
+}
+.header .layout .btn{
+    border:1px solid var(--main-color);
+
+}
+/* end header */
+
+/* About */
+.about .container .title h2{
+    position: relative;
+}
+.about .container .title h2::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    left: 0px;
+    bottom: -25%;
+}
+.about .container .row .col-md-4 .item{
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+
+}
+.about .container .row .col-md-4 .item:hover{
+    cursor: pointer;
+}
+.about .container .row .col-md-4 .item:hover.item::after{
+    bottom: 100%;
+    left: 100%;
+}
+.about .container .row .col-md-4 .item:hover.item::before{
+    top: 100%;
+    left: -100%;
+    cursor: pointer;
+}
+.about .container .row .col-md-4 .item::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(90deg, rgba(0,0,0,1),var(--shadow-color));
+    left: 0px;
+    bottom: 50%;
+    transition: var(--transition);
+}
+.about .container .row .col-md-4 .item::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(90deg,var(--shadow-color), rgba(0,0,0,1));
+    left: 0px;
+    top: 50%;
+    transition: var(--transition);
+}
+
+
+
+/* End About */
+
+/* racing */
+.racing .container .title h2::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    top: 125%;
+    left: 0px;
+}
+.racing .container .row .item{
+    overflow: hidden;
+    transition: 3s;
+}
+.racing .container .row .item::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0%;
+    background: linear-gradient(90deg, rgba(0,0,0,1),var(--shadow-color));
+    transition: var(--transition);
+}
+.racing .container .row .item:hover.item::after{
+    top: 0%;
+}
+.racing .container .row .item .btn{
+    z-index: 5;
+    opacity: 0;
+    border: 2px solid #000;
+    border-radius: 10px !important;
+    font-size: .9rem;
+    width: 9rem;
+    transition: opacity 3s;
+}
+.racing .container .row .item .btn:hover{
+    background-color: var(--main-color);
+    border: var(--main-color);
+}
+.racing .container .row .item:hover{
+    cursor: pointer;
+}
+.racing .container .row .item:hover .btn{
+    opacity: 1;
+}
+
+/* end racing */
+
+/* zombia */
+.zombie .container .title h2::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    top: 125%;
+    left: 0px;
+}
+.zombie .container .row .item{
+    overflow: hidden;
+    transition: 3s;
+}
+.zombie .container .row .item::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0%;
+    background: linear-gradient(90deg, rgba(0,0,0,1),var(--shadow-color));
+    transition: var(--transition);
+}
+.zombie .container .row .item:hover.item::after{
+    top: 0%;
+}
+.zombie .container .row .item .btn{
+    z-index: 5;
+    opacity: 0;
+    border: 2px solid #000;
+    border-radius: 10px !important;
+    font-size: .9rem;
+    width: 9rem;
+    transition: opacity 3s;
+}
+.zombie .container .row .item .btn:hover{
+    background-color: var(--main-color);
+    border: var(--main-color);
+}
+.zombie .container .row .item:hover{
+    cursor: pointer;
+}
+.zombie .container .row .item:hover .btn{
+    opacity: 1;
+}
+/* end zombia */
+
+/* action */
+.action .container .title h2::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    top: 125%;
+    left: 0px;
+}
+.action .container .row .item{
+    overflow: hidden;
+    transition: 3s;
+}
+.action .container .row .item::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0%;
+    background: linear-gradient(90deg, rgba(0,0,0,1),var(--shadow-color));
+    transition: var(--transition);
+}
+.action .container .row .item:hover.item::after{
+    top: 0%;
+}
+.action .container .row .item .btn{
+    z-index: 5;
+    opacity: 0;
+    border: 2px solid #000;
+    border-radius: 10px !important;
+    font-size: .9rem;
+    width: 9rem;
+    transition: opacity 3s;
+}
+.action .container .row .item .btn:hover{
+    background-color: var(--main-color);
+    border: var(--main-color);
+}
+.action .container .row .item:hover{
+    cursor: pointer;
+}
+.action .container .row .item:hover .btn{
+    opacity: 1;
+}
+/* end action */
+
+
+/* contacts */
+
+.conacts .form .title{
+    position: relative;
+
+}
+.conacts .form .title::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+    left: 0%;
+    top: 110%;
+    z-index: 5;
+}
+.conacts .form .btn{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.conacts .form .btn::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    right: 100%;
+    top: 0%;
+    z-index: -1;
+    transition: var(--transition);
+}
+.conacts .form .btn:hover.btn::after{
+    right: 0%;
+}
+/* end contaacts */
+
+/* footer */
+.footer .container{
+    flex-flow: column;
+}
+.footer .container span{
+    color: var(--main-color) !important;
+}
+.form-control:focus{
+    box-shadow: 0px 0px 0px 5px var(--shadow-color) !important;
+    color: var(--shadow-color) !important;
+}
+/* end footer */
+/* containerBox */
+.containerBox{
+    position: fixed;
+    z-index: 33;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(247, 7, 118, 0.5);
+}
+.itemsBox{
+    position: relative;
+    width: 50%;
+    height: 500px;
+    background-image: url(../image/ab1.jfif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemsBox i{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 30px;
+}
